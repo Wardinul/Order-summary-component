@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Wardinul/Order-summary-component](https://your-live-site-url.com)
-- Live Site URL: [https://wardinul.github.io/Order-summary-component/](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://wardinul.github.io/Order-summary-component/)
 
 ## My process
 
