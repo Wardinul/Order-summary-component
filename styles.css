@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --main-bg:hsl(225, 100%, 94%);
+    --button-bg: hsl(245, 75%, 52%);
+    
+    --card-bg:hsl(225, 100%, 98%);
+    --desaturated: hsl(224, 23%, 55%);
+    --change: hsl(223, 47%, 23%);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.bg-pattern{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    height: 65vh;
+}
+
+p{
+    font-size: 16px;
+    color: var(--desaturated);
+}
+
+.hero-img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width: 100%;
+}
+
+.card-wrapper{
+    max-width: 400px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    margin: 1em 2em;
+}
+
+.card-info{
+    padding:3em;
+}
+
+.shop{
+    background-color:hsla(225, 100%, 94%, 0.605) ;
+    padding:1.2em;
+    border-radius: 20px;
+}
+
+.price-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-info{
+    display: flex;
+    align-items: center;
+}
+
+.price-info img{
+    width:40px;
+    height: 40px;
+}
+
+.title{
+    font-weight: 900;
+    color: var(--change);
+}
+
+.card-info > h2,
+.card-info > p{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.plan p,
+.plan span{
+    margin: .2em 0;
+    margin-left: 1em;
+}
+
+.plan span{
+    color: var(--change);
+    font-weight: 700;
+}
+
+.change-btn{
+    color: var(--button-bg);
+    font-weight: 700;
+}
+
+.change-btn:hover{
+    text-decoration: none;
+    color: hsl(245, 68%, 58%);
+}
+
+.card-order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-order a{
+    margin-top:2em;
+    text-decoration: none;
+}
+
+.payment-btn{
+    background-color: var(--button-bg);
+    color: white;
+    text-align: center;
+    padding: .7em 0;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
+}
+
+.payment-btn:hover{
+    background-color: hsl(245, 68%, 58%);
+}
+
+.cancel-btn{
+    color: var(--desaturated);
+    font-weight: 900;
+}
+
+.cancel-btn:hover{
+    color: var(--change);
+}
+
+.attribution{
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:28.125em) {
+    .card-info{
+        padding: 1.5em;
+    }
+    .plan span,
+    .plan p,
+    .change-btn{
+        font-size:14px;
+    }
+    .bg-pattern{
+        background-image: url(images/pattern-background-mobile.svg);
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:21.875em) {
+    .price-info{
+        flex-direction: column;
+    }
+    .card-info h2{
+        font-size: 18px;
+    }
+    .card-info p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:18.75em) {
+    .shop,
+    .price-container,
+    .price-info{
+        flex-direction: column;
+    }
+}
